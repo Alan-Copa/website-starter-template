@@ -18,21 +18,50 @@
   <main>
     <h2>Contact Us</h2>
     <form id="contactForm">
-      <label for="name">Your Name</label>
-      <input id="name" name="name" type="text" placeholder="Your Name" required>
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label for="name">Your Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" required>
 
-      <label for="email">Your Email</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="email">Your Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
 
-      <label for="reason">Reason for contact</label>
-      <select id="reason" name="reason">
-        <option>Ask about activities</option>
-        <option>Send a drawing</option>
-        <option>Other</option>
-      </select>
+        <label for="tel">Phone (optional)</label>
+        <input id="tel" name="tel" type="tel" placeholder="(555) 555-0123">
+      </fieldset>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      <fieldset>
+        <legend>About your message</legend>
+
+        <p>Contact as:</p>
+        <label><input type="radio" name="contactas" value="parent" checked> Parent</label>
+        <label><input type="radio" name="contactas" value="teacher"> Teacher</label>
+        <label><input type="radio" name="contactas" value="child"> Child</label>
+
+        <label for="reason">Reason for contact</label>
+        <select id="reason" name="reason">
+          <option>Ask about activities</option>
+          <option>Send a drawing</option>
+          <option>Other</option>
+        </select>
+
+        <label for="fav">Favorite activity</label>
+        <input list="activities" id="fav" name="fav" placeholder="Pick or type">
+        <datalist id="activities">
+          <option value="Coloring">
+          <option value="Story time">
+          <option value="Science experiment">
+        </datalist>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+        <p>
+          <label><input type="checkbox" name="newsletter"> Sign up for our monthly newsletter</label>
+        </p>
+
+        <p>Characters typed: <output for="message" id="charCount">0</output></p>
+      </fieldset>
 
       <button type="submit">Send</button>
     </form>
