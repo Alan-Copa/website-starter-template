@@ -18,11 +18,31 @@
   <main>
     <h2>Contact Us</h2>
     <form id="contactForm">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Message" required></textarea>
+      <label for="name">Your Name</label>
+      <input id="name" name="name" type="text" placeholder="Your Name" required>
+
+      <label for="email">Your Email</label>
+      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+      <label for="reason">Reason for contact</label>
+      <select id="reason" name="reason">
+        <option>Ask about activities</option>
+        <option>Send a drawing</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
       <button type="submit">Send</button>
     </form>
+
+    <address>
+      <strong>My Website</strong><br>
+      123 Fun Lane<br>
+      Playtown, PT 54321<br>
+      <a href="mailto:hello@mywebsite.example">hello@mywebsite.example</a>
+    </address>
   </main>
 
   <footer>
